@@ -43,17 +43,20 @@ header .navbar {
     color: white;
     text-decoration: none;
     transition: 0.2s ease;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .navbar a:hover {
-    color: burlywood;
+    color: violet;
 }
 
 .hero-section {
     height: 100vh;
-    background-image: url(https://t3.ftcdn.net/jpg/04/36/77/74/360_F_436777481_3Nk1sGJwa9UaYtJZ8dzeHVZrV4j0ACo3.jpg);
+    background-image: url(images/vapour.avif);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 0 20px;
@@ -76,6 +79,7 @@ header .navbar {
     font-weight: 300;
     max-width: 600px;
     margin-top: 15px;
+    font-size: larger;
 }
 
 .hero-section .content button {

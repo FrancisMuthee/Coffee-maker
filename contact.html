@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    
+        <div class="information">
+            <div class="form">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+                    <input type="hidden" name="access_key" value="b3dd120b-9bad-45e7-a04a-e2975964155d" />
+                    <input
+                    type="hidden"
+                    name="subject"
+                    value="New Submission from Web3Forms"
+                    />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                    <input type="hidden" name="access_key" value=" b3dd120b-9bad-45e7-a04a-e2975964155d">
+                    <h2>Message Us</h2>
+                    <p>Name:</p>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <p>Email:</p>
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                    <p>Phone Number:</p>
+                    <input type="text" id="phone" name="text" placeholder="Phone number" required>
+                    <p>Message:</p>
+                    <textarea id="message" name="message" rows="4" placeholder="message"></textarea>
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <button type="submit">SUBMIT</button>
+
+                     <p class="text-base text-center text-gray-400" id="result"></p>
+                </form>
+            </div>
+            
+        </div> 
+
+        <div class="num">
+            <h4>Email us:</h4>
+            <ul>
+            <li><i class="enve fa-solid fa-envelope"></i> &nbsp;&nbsp;&nbsp;<a class="email" href="mailto: reddmarx01@gmail.com?subject = Feedback&body = Message">reddmarx01gmail.com </a></li>
+            <li><i class="iphone fa-solid fa-phone"></i> &nbsp;&nbsp;&nbsp;<a class="number" href="tel:+254715326477">+254715326477</a></li>
+            </ul>
+        </div>
 </body>
 </html>
