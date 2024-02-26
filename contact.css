@@ -1,5 +1,5 @@
 :root{
-    background-color: brown;
+    background-color: black;
     margin: 0;
     padding: 0;
     /* background-image: url(images/mindful.jpg); */
@@ -9,7 +9,7 @@
 h2{
     color: white;
 }
-form{
+form{     
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
