@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.par{
+    text-align: center;
+    font-size: larger;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+.border{
+    color: green;
+    margin: 26px auto;
+}
+.par h2{
+    color: brown;
+}

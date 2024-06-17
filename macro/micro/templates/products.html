@@ -1,10 +1,12 @@
+{%load static%}
+{%block content%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="{% static '/css/products.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
@@ -13,7 +15,7 @@
     </div>
     <div class="gallery">
         <div class="content">
-            <img src="images/cup.jpeg">
+            <img src="{% static 'images/cup.jpeg' %}">
             <!-- <h3>Medium Roast Bean 500g</h3> -->
             <p>Roasted from farm to cup.</p>
             <h6>Ksh.1249.00</h6>
@@ -28,7 +30,7 @@
         </div>
 
         <div class="content">
-            <img src="images/cup3.jpg">
+            <img src="{% static 'images/cup3.jpg' %}">
             <!-- <h3>Ready made 250g</h3> -->
             <p>
             Brighten your day. 
@@ -48,3 +50,4 @@
     
 </body>
 </html>
+{%endblock%}
