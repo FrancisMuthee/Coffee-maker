@@ -54,7 +54,7 @@ header .navbar {
 .hero-section {
     height: 100vh;
     /* background-image: url(images/vapour.avif); */
-    background-image: url(images/cnn.jpg);
+    background-image: url(/static/images/vapour.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
