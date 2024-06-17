@@ -12,8 +12,9 @@
 <body>
         <div class="information">
             <div class="form">
-                <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
-                    <input type="hidden" name="access_key" value="b3dd120b-9bad-45e7-a04a-e2975964155d" />
+                <form action="{% url 'contact' %}" method="POST" id="form" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="" value="" />
                     <input
                     type="hidden"
                     name="subject"
@@ -21,7 +22,7 @@
                     />
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
-                    <input type="hidden" name="access_key" value=" b3dd120b-9bad-45e7-a04a-e2975964155d">
+                    <input type="hidden" name="" value="">
                     <h2>Message Us</h2>
                     <p>Name:</p>
                     <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -31,7 +32,7 @@
                     <input type="text" id="phone" name="text" placeholder="Phone number" required>
                     <p>Message:</p>
                     <textarea id="message" name="message" rows="4" placeholder="message"></textarea>
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <input type="hidden" name="redirect" value="">
                     <button type="submit">SUBMIT</button>
 
                      <p class="text-base text-center text-gray-400" id="result"></p>
