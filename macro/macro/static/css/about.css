@@ -1,18 +1,33 @@
-*{
+/* about.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
+.par {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.par{
-    text-align: center;
-    font-size: larger;
-    font-family: sans-serif;
-    text-decoration: underline;
+
+.border {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
 }
-.border{
-    color: green;
-    margin: 26px auto;
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
 }
-.par h2{
-    color: brown;
+
+p {
+    color: #666;
+    text-align: justify;
 }

@@ -1,0 +1,1 @@
+This is a django project, The main aim is to sell coffee in stock. Every data is collected and saved in mySQL.
