@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .email_utils import emails
-from .models import Contact
+from .models import Contact 
+from .models import Products
 
 # Create your views here.
 
@@ -20,7 +21,23 @@ def contact(request):
     return render(request, 'contact.html')
 
 def products(request):
-    return render(request, 'products.html')
+    products1 = Products()  # Create an instance of the Products model
+    products1.desc = 'Feel the flavour'
+    products1.price = 1200
+    products1.images = '/cup3.jpg'
+
+    products2 = Products()  # Create an instance of the Products model
+    products2.desc = 'Feel the flavour'
+    products2.price = 1200
+    products2.images= '/cup4.jpeg'
+
+    products3 = Products()  # Create an instance of the Products model
+    products3.desc = 'Feel the flavour'
+    products3.price = 1200
+    products3.images= '/mindful.jpg'
+    products = [products1, products2, products3]
+
+    return render(request, 'products.html', {'products': products})
 
 def about(request):
     return render(request, 'about.html')

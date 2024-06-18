@@ -1,4 +1,5 @@
 {%load static%}
+{% static "images" as baseUrl %}
 {%block content%}
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +14,13 @@
     <div class="header">
         <h2>Product List</h2>
     </div>
+    {%for product in products %}
     <div class="gallery">
         <div class="content">
-            <img src="{% static 'images/cup.jpeg' %}">
+            <img src="{{baseUrl}}{{product.images}}">
             <!-- <h3>Medium Roast Bean 500g</h3> -->
-            <p>Roasted from farm to cup.</p>
-            <h6>Ksh.1249.00</h6>
+            <p>{{product.desc}}</p>
+            <h6>{{product.price}}</h6>
             <ul>
                 <li><i class="fa fa-star checked"></i></li>
                 <li><i class="fa fa-star checked"></i></li>
@@ -28,8 +30,10 @@
             </ul>
             <button class="buy-1">Buy Now</button>
         </div>
+    </div>
+        {% endfor %}
 
-        <div class="content">
+        {% comment %} <div class="content">
             <img src="{% static 'images/cup3.jpg' %}">
             <!-- <h3>Ready made 250g</h3> -->
             <p>
@@ -44,9 +48,8 @@
                 <li><i class="fa fa-star checked"></i></li>
             </ul>
             <button class="buy-2">Buy Now</button>
-        </div>
-    </div>
-    </div>
+        </div> {% endcomment %}
+    
     
 </body>
 </html>
