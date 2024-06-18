@@ -59,6 +59,9 @@ def products(request):
 def about(request):
     return render(request, 'about.html')
 
+def testimonials(request):
+    return render(request, 'testimonials.html')
+
 
 def emails(request):
     subject = 'Premium Notifications'

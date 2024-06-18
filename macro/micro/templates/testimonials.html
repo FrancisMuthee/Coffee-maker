@@ -1,10 +1,12 @@
+{%load static%}
+{%block content%}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
-    <link rel="stylesheet" href="testi.css">
+    <link rel="stylesheet" href="{% static '/css/testi.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
@@ -17,7 +19,7 @@
             <div class="row">
                 <div class="col">
                     <div class="testimonial">
-                        <img src="">
+                        <img src="/static/images/muthee.jpg">
                         <div class="name">Francis Muthee</div>
                         <div class="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -34,8 +36,8 @@
 
                 <div class="col">
                     <div class="testimonial">
-                        <img src="">
-                        <div class="name">Francis Muthee</div>
+                        <img src="/static/images/lucy.jpg">
+                        <div class="name">Lucy Muthoni</div>
                         <div class="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -52,8 +54,8 @@
 
                 <div class="col">
                     <div class="testimonial">
-                        <img src="">
-                        <div class="name">Francis Muthee</div>
+                        <img src="/static/images/ann.jpg">
+                        <div class="name">Ann Muthoni</div>
                         <div class="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -73,3 +75,4 @@
 
 </body>
 </html>
+{%endblock%}
