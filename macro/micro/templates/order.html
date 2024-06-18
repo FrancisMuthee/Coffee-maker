@@ -1,0 +1,29 @@
+<!-- myapp/templates/myapp/buy_now.html -->
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Now Button</title>
+</head>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="buy-1">Buy Now</button>
+</form>
+
+<script>
+document.querySelector('.buy-1').addEventListener('click', function() {
+    var email = prompt("Please enter your email address for follow-up:");
+    if (email !== null) {
+        document.querySelector('input[name="email"]').value = email;
+    }
+});
+</script>
+
+</body>
+</html>
+
+{% endblock %}

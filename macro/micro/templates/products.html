@@ -28,7 +28,16 @@
                 <li><i class="fa fa-star checked"></i></li>
                 <li><i class="fa fa-star checked"></i></li>
             </ul>
-            <button class="buy-1">Buy Now</button>
+            <form action="{% url 'products' %}" method="POST" id="form" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <!-- Form fields here -->
+                <p>Email:</p>
+                    <input type="email" id="email" name="email" required>
+                <button type="submit" class="buy-1">Buy Now</button>
+            </form>
+            
+
+            {% comment %} <button class="buy-1">Buy Now</button> {% endcomment %}
         </div>
     </div>
         {% endfor %}
@@ -49,7 +58,14 @@
             </ul>
             <button class="buy-2">Buy Now</button>
         </div> {% endcomment %}
-    
+        <script>
+            document.querySelector('.buy-1').addEventListener('click', function() {
+                var email = prompt("Please enter your email address for follow-up:");
+                if (email !== null) {
+                    document.querySelector('input[name="email"]').value = email;
+                }
+            });
+            </script>
     
 </body>
 </html>
