@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
+
     <div class="header">
         <h2>Product List</h2>
     </div>
@@ -59,6 +60,21 @@
             <button class="buy-2">Buy Now</button>
         </div> {% endcomment %}
         <script>
+            <script>
+                const header = document.querySelector("header");
+                const hamburgerBtn = document.querySelector("#hamburger-btn");
+            
+            // Toggle mobile menu on hamburger button click
+            hamburgerBtn.addEventListener("click", () => {
+                // Check if the menu is currently shown
+                if (header.classList.contains("show-mobile-menu")) {
+                    // If it is, hide it
+                    header.classList.remove("show-mobile-menu");
+                } else {
+                    // If it's not, show it
+                    header.classList.add("show-mobile-menu");
+                }
+            });
             document.querySelector('.buy-1').addEventListener('click', function() {
                 var email = prompt("Please enter your email address for follow-up:");
                 if (email !== null) {
