@@ -21,21 +21,23 @@ def contact(request):
     return render(request, 'contact.html')
 
 def products(request):
-    products1 = Products()  # Create an instance of the Products model
-    products1.desc = 'Feel the flavour'
-    products1.price = 1200
-    products1.images = '/cup3.jpg'
+    # products1 = Products()  # Create an instance of the Products model
+    # products1.desc = 'Feel the flavour'
+    # products1.price = 1200
+    # products1.images = '/cup3.jpg'
 
-    products2 = Products()  # Create an instance of the Products model
-    products2.desc = 'Feel the flavour'
-    products2.price = 1200
-    products2.images= '/cup4.jpeg'
+    # products2 = Products()  # Create an instance of the Products model
+    # products2.desc = 'Feel the flavour'
+    # products2.price = 1200
+    # products2.images= '/cup4.jpeg'
 
-    products3 = Products()  # Create an instance of the Products model
-    products3.desc = 'Feel the flavour'
-    products3.price = 1200
-    products3.images= '/mindful.jpg'
-    products = [products1, products2, products3]
+    # products3 = Products()  # Create an instance of the Products model
+    # products3.desc = 'Feel the flavour'
+    # products3.price = 1200
+    # products3.images= '/mindful.jpg'
+    # products = [products1, products2, products3]
+
+    products = Products.objects.all()
 
     return render(request, 'products.html', {'products': products})
 

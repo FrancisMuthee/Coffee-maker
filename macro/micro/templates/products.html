@@ -17,7 +17,7 @@
     {%for product in products %}
     <div class="gallery">
         <div class="content">
-            <img src="{{baseUrl}}{{product.images}}">
+            <img src="{{product.images.url}}">
             <!-- <h3>Medium Roast Bean 500g</h3> -->
             <p>{{product.desc}}</p>
             <h6>{{product.price}}</h6>
