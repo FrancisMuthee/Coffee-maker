@@ -8,5 +8,5 @@ The languages used are:
 3. Django framework 
 4. MYSQL for database management.
 
-In future we want to host, all coffeee producers and compete from a similar starting point.
+In future we want to host, all coffeee producers and compete from one standpoint.
 
