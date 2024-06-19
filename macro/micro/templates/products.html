@@ -38,51 +38,12 @@
             </form>
             
 
-            {% comment %} <button class="buy-1">Buy Now</button> {% endcomment %}
+           
         </div>
     </div>
         {% endfor %}
 
-        {% comment %} <div class="content">
-            <img src="{% static 'images/cup3.jpg' %}">
-            <!-- <h3>Ready made 250g</h3> -->
-            <p>
-            Brighten your day. 
-            </p>
-            <h6>Ksh.45.00</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            <button class="buy-2">Buy Now</button>
-        </div> {% endcomment %}
-        <script>
-            <script>
-                const header = document.querySelector("header");
-                const hamburgerBtn = document.querySelector("#hamburger-btn");
-            
-            // Toggle mobile menu on hamburger button click
-            hamburgerBtn.addEventListener("click", () => {
-                // Check if the menu is currently shown
-                if (header.classList.contains("show-mobile-menu")) {
-                    // If it is, hide it
-                    header.classList.remove("show-mobile-menu");
-                } else {
-                    // If it's not, show it
-                    header.classList.add("show-mobile-menu");
-                }
-            });
-            document.querySelector('.buy-1').addEventListener('click', function() {
-                var email = prompt("Please enter your email address for follow-up:");
-                if (email !== null) {
-                    document.querySelector('input[name="email"]').value = email;
-                }
-            });
-            </script>
-    
+<script src="{% static 'script.js' %}"></script>
 </body>
 </html>
 {%endblock%}

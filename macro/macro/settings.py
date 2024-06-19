@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-okwhm-+g!+ll$3l4a+*nh5rl$gd2#^xdr=q1+la^0rzolz848t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'EAT'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
