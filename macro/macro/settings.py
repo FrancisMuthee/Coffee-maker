@@ -77,11 +77,7 @@ WSGI_APPLICATION = 'macro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'realdata',
-        'USER': 'root',
-        'PASSWORD': 'Fr@nk.oo1!',
-        'HOST': 'localhost',
-        'PORT': '3306'
+       
     }
 }
 
