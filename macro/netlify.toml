@@ -1,0 +1,6 @@
+[build]
+  command = "python manage.py runserver"
+  publish = "macro/macro/static"
+
+[context.production.environment]
+  DJANGO_SETTINGS_MODULE = "macro.settings.prod"
