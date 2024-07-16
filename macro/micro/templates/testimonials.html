@@ -1,5 +1,5 @@
-{%load static%}
-{%block content%}
+{% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
     <link rel="stylesheet" href="{% static '/css/testi.css' %}">
+    <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
@@ -56,6 +57,7 @@
                     <div class="testimonial">
                         <img src="/static/images/ann.jpg">
                         <div class="name">Ann Muthoni</div>
+                        <h1></h1>
                         <div class="stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -76,7 +78,101 @@
         <div class="return-to-top">
             <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
         </div>
+        {% endblock content %}
+
+        <h1 style="text-align: center; font-size: 24px; font-weight: bold; text-transform: uppercase; text-decoration: underline; color: red">Products</h1>
+<h5 style="text-align: center; font-size: 20px; color: black">Looking to shop quality products? <br>Beautiful Homes are made not Bought. ~Eng. Faraday.</h5>
+
+<section id="products">
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/wallPapers.jpg" alt="wallpaper" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Wallpapers</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">KSh. 2000/ roll</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/cctvpacka.jpeg" alt="cctv" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Full CCTV package cameras</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Price/Type</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/electronicdoor.jpeg" alt="homedecor" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Metal Detectors</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">On Order</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/signages.jpg" alt="Signages" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Signages</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">From KSh. 3000</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/tabletop.jpg" alt="electronics" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Nunix Two Burners</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">KSh. 3,450</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/tenda.jpeg" alt="cooker" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Routers</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">KSh. 2,500</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/phona.jpg" alt="phones accessories" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Phone accessories</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">Price/Item</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/dispensers.jpg" alt="Dispensers" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Water Dispensers</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">From KSh. 5,000</p>
+      </a>
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/water pump.jpg" alt="water pump" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Water pumps</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">KSh. 700</p>
+      </a> 
+      <a href="recent.html" class="group">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="faraday/blender.jpg" alt="water pump" class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">Blenders</h3>
+        <p class="mt-1 text-lg font-medium text-gray-900">KSh. 700</p>
+        <a href="recent.html" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="faraday/wire2.5.jpg" alt="water pump" class="h-full w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Wires</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">Price/roll</p>
+        </a>
+      </a>
+      
+
+      <!-- More products... -->
+    </div>
+  </div>
+</div>
+</section>
 
 </body>
 </html>
-{%endblock%}

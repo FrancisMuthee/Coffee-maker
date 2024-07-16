@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoffeBer</title>
+    <title>KoffeBer - ❤🎶</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -15,6 +15,7 @@
     <meta property="og:title" content="Kofeem Peaks -Your favourite coffee!" />
 </head>
 <body>
+
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
@@ -34,6 +35,14 @@
             <li><a href="{%url 'testimonials' %}">Testimonials</a></li>
             <li><a href="{%url 'about' %}">About us</a></li>
             <li><a href="{%url 'contact' %}">Contact us</a></li>
+
+            {% if user.is_authenticated%}
+            <li>Hello, {{user.first_name}}</li>
+            <li><a href="{%url 'products' %}">logout</a></li>
+            {% else %}
+            <li><a href="{%url 'register' %}">register</a></li>
+            <li><a href="{%url 'products' %}">login</a></li>
+            {% endif %}
         </ul>
         <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
     </nav>

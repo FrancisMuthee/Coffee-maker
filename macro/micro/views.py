@@ -4,6 +4,7 @@ from .email_utils import emails
 from .models import Contact, Products, Customer
 from django.contrib import messages
 from django.template.loader import render_to_string
+from django.contrib.auth.models import User, auth
 
 
 def index(request):
@@ -93,4 +94,55 @@ def emails(request):
 def contact_success(request):
     html_content = render_to_string('thank_you.html', {'request': request})
     return HttpResponse(html_content)
+
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user= auth.authenticate(username=username,password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect("/")
+        else:
+            messages.info(request, 'invalid credentials')
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
+    
+# Create your views here.
+def register(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+
+        if not first_name or not password or not confirm_password:
+            if User.objects.filter(username=username).exists(): # type: ignore
+                messages.info(request, 'Name taken')
+                return redirect('register')
+            elif User.objects.filter(email_exact=email).exists():
+                messages.info(request, 'Email taken')
+                return redirect('register')
+            else:
+                user = User.objects.create_user(email=email, first_name=first_name, last_name=last_name) # type: ignore
+                user.set_password(password)
+                user.save()
+                messages.info(request, 'Successful')
+                print('User created')
+                return redirect('login')
+            
+        else:
+            print('password not matching...')
+            return redirect('register')
+    else:
+        return render (request, 'register.html')
+    
+# def logout(request):
+#     auth.logout(request)
+#     return redirect('/')
 
